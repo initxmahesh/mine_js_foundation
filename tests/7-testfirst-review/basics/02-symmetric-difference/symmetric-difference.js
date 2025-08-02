@@ -10,4 +10,12 @@
 
 /* eslint-disable no-unused-vars */
 
-function difference(arrayA, arrayB) {}
+function difference(arrayA, arrayB) {
+  return arrayA.filter((ele) => !arrayB.includes(ele));
+}
+
+function symmetricDiff(arrayA, arrayB) {
+  let arr = difference(arrayA, arrayB);
+  let arr2 = difference(arrayB, arrayA);
+  return arr.concat(arr2);
+}
